@@ -1,0 +1,31 @@
+{
+  "name": "sqs-application",
+  "version": "1.0.0",
+  "description": "Simple application to send messages to SQS queue",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start.dev": "nodemon -L",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasvillaverde/sqs-implementation.git"
+  },
+  "keywords": [
+    "sqs"
+  ],
+  "author": "Lucas Villa Verde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasvillaverde/sqs-implementation/issues"
+  },
+  "homepage": "https://github.com/lucasvillaverde/sqs-implementation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "nodemon": "^2.0.4"
+  }
+}
