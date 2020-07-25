@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/lucasvillaverde/sqs-implementation#readme",
   "dependencies": {
+    "aws-sdk": "^2.720.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
