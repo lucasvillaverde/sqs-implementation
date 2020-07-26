@@ -12,6 +12,4 @@ COPY . .
 
 EXPOSE $APP_PORT
 
-RUN ls -al
-
 CMD [ "npm", "run", "start.dev" ]
