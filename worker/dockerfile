@@ -1,0 +1,15 @@
+FROM node:12
+
+ARG APP_PORT
+
+WORKDIR /worker
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE $APP_PORT
+
+CMD [ "npm", "run", "start.dev" ]
