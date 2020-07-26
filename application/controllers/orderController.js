@@ -3,12 +3,14 @@ const QueueService = require('../services/queueService');
 const store = async (req, res) => {
     // Sending payment message to Queue.
     // Setting parameters before send message to queue.
-    let params = QueueService.params;
-    params.MessageBody = JSON.stringify({
-        order_id: req.params.id,
-        ...req.body,
-        date: (new Date()).toISOString()
-    });
+    const params = {
+        QueueUrl: `${process.env.AWS_SQS_URL}/${QueueService.accountId}/${QueueService.queueName}`,
+        MessageBody: JSON.stringify({
+            order_id: req.params.id,
+            ...req.body,
+            date: (new Date()).toISOString()
+        })
+    };
 
     try {
         await QueueService.SQS.sendMessage(params).promise();
