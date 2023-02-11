@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/lucasvillaverde/sqs-implementation#readme",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "aws-sdk": "^2.814.0",
